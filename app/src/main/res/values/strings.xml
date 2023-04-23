@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Youtube</string>
+    <string name="video_name">Video name</string>
+    <string name="author_name">author name</string>
+    <string name="dot">.</string>
+    <string name="views">23462</string>
+    <string name="view">просмотров</string>
+    <string name="ago">6 месяцев назад</string>
 </resources>

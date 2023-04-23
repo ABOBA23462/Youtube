@@ -8,7 +8,7 @@ import com.example.youtube.data.remote.apiservice.VideoApiService
 import com.example.youtube.data.repositories.pagingsource.VideoPagingSource
 import javax.inject.Inject
 
-class VideoRepository @Inject constructor(private val service: VideoApiService) : BaseRepository() {
+class VideoRepository @Inject constructor(private val service: VideoApiService) {
 
     fun fetchVideo() = Pager(
         PagingConfig(pageSize = 20, initialLoadSize = 10)

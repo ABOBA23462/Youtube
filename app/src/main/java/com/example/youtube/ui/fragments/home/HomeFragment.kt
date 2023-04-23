@@ -21,7 +21,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
 
     override fun initialize() {
         binding.rvVideo.apply {
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = LinearLayoutManager(context)
+            binding.rvVideo.layoutManager = layoutManager
             adapter = videoAdapter
         }
     }
@@ -32,23 +33,5 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
                 videoAdapter.submitData(it)
             }
         }
-//        subscribeToVideo()
     }
-
-//    private fun subscribeToVideo() {
-//        viewModel.fetchVideo().observe(viewLifecycleOwner){
-//            when(it){
-//                is Resource.Error -> {
-//                    Log.e("anime", it.message.toString  ())
-//                }
-//                is Resource.Loading -> {
-//
-//                }
-//                is Resource.Success -> {
-//                    Log.e("anime", it.message.toString  ())
-//                    videoAdapter.submitData(it)
-//                }
-//            }
-//        }
-//    }
 }

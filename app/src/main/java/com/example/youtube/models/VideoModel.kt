@@ -12,8 +12,9 @@ data class VideoModel(
     @SerializedName("snippet")
     val snippet: Snippet,
     @SerializedName("statistics")
-    val statistics : Statistics
+    val statistics: Statistics
 )
+
 data class Snippet(
     @SerializedName("channelId")
     val channelId: String,
@@ -24,20 +25,24 @@ data class Snippet(
     @SerializedName("publishedAt")
     val publishedAt: String,
     @SerializedName("channelTitle")
-    val channelTitle : String,
+    val channelTitle: String,
     @SerializedName("thumbnails")
-    val thumbnails :Thumbnails
-
+    val thumbnails: Thumbnails
 )
 
 data class Thumbnails(
+    @SerializedName("maxres")
+    val maxres: Maxres
+)
+
+data class Maxres(
     @SerializedName("url")
-    val url : String,
+    val url: String,
 )
 
 data class Statistics(
     @SerializedName("viewCount")
-    val viewCount: String,
+    val viewCount: String? = null,
     @SerializedName("likeCount")
     val likeCount: String,
 )

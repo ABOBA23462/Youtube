@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="303dp">
+    android:background="@color/white"
+    android:layout_height="316dp">
 
     <ImageView
         android:id="@+id/iv_cover"
         android:layout_width="match_parent"
-        android:layout_height="215dp"
+        android:layout_height="221dp"
         android:src="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +25,14 @@
         app:layout_constraintTop_toBottomOf="@id/iv_cover" />
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/tv_description_video"
         android:layout_width="265dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="10.5dp"
-        android:text="Video name"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/video_name"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -41,18 +43,18 @@
         android:id="@+id/tv_author_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="itpedia"
+        android:layout_marginTop="5dp"
+        android:text="@string/author_name"
         android:textColor="@color/grey"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/tv_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+        app:layout_constraintStart_toStartOf="@id/tv_description_video"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_video" />
 
     <TextView
         android:id="@+id/tv_dot1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="."
+        android:text="@string/dot"
         android:textColor="@color/grey"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -66,7 +68,7 @@
         android:id="@+id/tv_number_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="23,462"
+        android:text="@string/views"
         android:textColor="@color/grey"
         android:layout_marginStart="2dp"
         android:textSize="12sp"
@@ -78,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:text="просмотров"
+        android:text="@string/view"
         android:textColor="@color/grey"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/tv_number_view"
@@ -88,7 +90,7 @@
         android:id="@+id/tv_dot2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="."
+        android:text="@string/dot"
         android:textColor="@color/grey"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -102,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:text="6 месяцев назад"
+        android:text="@string/ago"
         android:textColor="@color/grey"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/tv_dot2"

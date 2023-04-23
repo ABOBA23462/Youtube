@@ -9,8 +9,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-
 class RetrofitClient {
+
     private val okHttpClient = OkHttpClient()
         .newBuilder()
         .addInterceptor(provideLoggingInterceptor())
@@ -22,7 +22,7 @@ class RetrofitClient {
         .build()
 
     private val retrofitClient = Retrofit.Builder()
-        .baseUrl("https://www.googleapis.com/youtube/v3/")
+        .baseUrl(Constant.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
