@@ -10,6 +10,6 @@ interface VideoApiService {
     @GET("videos")
     suspend fun fetchVideo(
         @Query("part") part: String = "snippet",
-        @Query("regionCode") regionCode: String = "ru"
+        @Query("id") id: String = "id"
     ): YoutubeResponse<VideoModel>
 }

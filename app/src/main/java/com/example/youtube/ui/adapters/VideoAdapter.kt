@@ -2,6 +2,7 @@ package com.example.youtube.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +10,7 @@ import com.example.youtube.databinding.ItemHomeBinding
 import com.example.youtube.models.VideoModel
 import com.example.youtube.utils.imageviewextension.setImage
 
-class VideoAdapter : ListAdapter<VideoModel, VideoAdapter.ViewHolder>(
+class VideoAdapter :PagingDataAdapter<VideoModel, VideoAdapter.ViewHolder>(
     VideoDiffCallback()
 ) {
 
